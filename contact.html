@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Sarah Sawalha</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #0077be;
+        }
+        .menu {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .menu a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .form-box {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #0077be;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <a href="index.html">Home</a>  
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="form-box">
+        <h2>Contact Form</h2>
+        
+        <form>
+            <div>
+                <label>	Your full Name:</label>
+                <input type="text" required>
+            </div>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" required>
+            </div>
+
+            <div>
+                <label>Country:</label>
+                <select required>
+                    <option value="">Choose country</option>
+                    <option>Jordan</option>
+                    <option>Lebanon</option>
+                    <option>UAE</option>
+                    <option>Kwait</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Happy to know your message:</label>
+                <textarea rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent!');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
